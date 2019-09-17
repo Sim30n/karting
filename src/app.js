@@ -20,7 +20,11 @@ hbs.registerPartials(partialsPath)
 app.use(express.static(publicDirectoryPath))
 
 app.get("", (req, res) =>{
-  res.render("index", {
+  res.render("index")
+})
+
+app.get("/tulokset", (req, res) =>{
+  res.render("tulokset", {
     petteri: drivers.driver[0].name,
     ville: drivers.driver[1].name,
     lauri: drivers.driver[2].name,
@@ -39,6 +43,13 @@ app.get("", (req, res) =>{
   })
 })
 
+app.get("/osakilpailut", (req, res) =>{
+  res.render("osakilpailut")
+})
+
+app.get("/kuljettajat", (req, res) =>{
+  res.render("kuljettajat")
+})
 
 app.listen(port, () => {
   console.log("Server is up on port " + port)
