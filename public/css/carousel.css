@@ -13,15 +13,3 @@
   margin-right: .75rem;
   margin-left: .75rem;
 }
-
-
-
-
-@media (min-width: 0px) and (max-width: 1000px) {
-  .navbar{
-    font-size: 2.1rem;
-  }
-  .navbar-brand{
-    font-size: 2.1rem;
-  }
-}

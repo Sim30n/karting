@@ -1,7 +1,8 @@
 const path = require("path")
 const express = require("express")
 const hbs = require("hbs")
-const drivers = require("./data.json")
+const imatra = require("./imatra.json")
+const vantaa = require("./vantaa.json")
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -25,21 +26,36 @@ app.get("", (req, res) =>{
 
 app.get("/tulokset", (req, res) =>{
   res.render("tulokset", {
-    petteri: drivers.driver[0].name,
-    ville: drivers.driver[1].name,
-    lauri: drivers.driver[2].name,
-    jani: drivers.driver[3].name,
-    toni: drivers.driver[4].name,
-    kisaAikaPetteri: drivers.driver[0].circuitTime,
-    kisaAikaVille: drivers.driver[1].circuitTime,
-    kisaAikaLauri: drivers.driver[2].circuitTime,
-    kisaAikaJani: drivers.driver[3].circuitTime,
-    kisaAikaToni: drivers.driver[4].circuitTime,
-    aAikaPetteri: drivers.driver[0].qualTime,
-    aAikaVille: drivers.driver[1].qualTime,
-    aAikaLauri: drivers.driver[2].qualTime,
-    aAikaJani: drivers.driver[3].qualTime,
-    aAikaToni: drivers.driver[4].qualTime
+    imatraPetteri: imatra.driver[0].name,
+    imatraVille: imatra.driver[1].name,
+    imatraLauri: imatra.driver[2].name,
+    imatraJani: imatra.driver[3].name,
+    imatraToni: imatra.driver[4].name,
+    imatraKisaAikaPetteri: imatra.driver[0].circuitTime,
+    imatraKisaAikaVille: imatra.driver[1].circuitTime,
+    imatraKisaAikaLauri: imatra.driver[2].circuitTime,
+    imatraKisaAikaJani: imatra.driver[3].circuitTime,
+    imatraKisaAikaToni: imatra.driver[4].circuitTime,
+    imatraAaikaPetteri: imatra.driver[0].qualTime,
+    imatraAaikaVille: imatra.driver[1].qualTime,
+    imatraAaikaLauri: imatra.driver[2].qualTime,
+    imatraAaikaJani: imatra.driver[3].qualTime,
+    imatraAaikaToni: imatra.driver[4].qualTime,
+    vantaaPetteri: vantaa.driver[0].name,
+    vantaaVille: vantaa.driver[1].name,
+    vantaaLauri: vantaa.driver[2].name,
+    vantaaJani: vantaa.driver[3].name,
+    vantaaToni: vantaa.driver[4].name,
+    vantaaKisaAikaPetteri: vantaa.driver[0].circuitTime,
+    vantaaKisaAikaVille: vantaa.driver[1].circuitTime,
+    vantaaKisaAikaLauri: vantaa.driver[2].circuitTime,
+    vantaaKisaAikaJani: vantaa.driver[3].circuitTime,
+    vantaaKisaAikaToni: vantaa.driver[4].circuitTime,
+    vantaaAaikaPetteri: vantaa.driver[0].qualTime,
+    vantaaAaikaVille: vantaa.driver[1].qualTime,
+    vantaaAaikaLauri: vantaa.driver[2].qualTime,
+    vantaaAaikaJani: vantaa.driver[3].qualTime,
+    vantaaAaikaToni: vantaa.driver[4].qualTime
   })
 })
 
