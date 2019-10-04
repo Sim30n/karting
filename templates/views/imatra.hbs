@@ -1,0 +1,44 @@
+{{>header}}
+<!-- ChartJS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">D1 Karting</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Etusivu</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/kuljettajat">Kuljettajat<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/osakilpailut">Osakilpailut</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/tulokset">Tulokset</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="container" style="text-align:center; margin-top:200px; margin-bottom:50px ">
+  <h1 class="mt-5">{{otsikko}}</h1>
+  <p class="lead">Imatran GPn rata on 7635m pitkä ja 7,2m leveä. Viikonlopun ajot ajettiin vuokrautoilla, joiden voimanlähteenä toimi
+                  Hondan toimittama 390 kuutioinen 14 hevosvoimainen 4-tahtimoottori.</p>
+  <p>Voiton vei tiukan kamppailun jälkeen Lauri, joka ajoi varman ja tasaisen suorituksen läpi viikonlopun. Toiseksi ajoi Jani, joka ajoi myös viikonlopun nopeimman kierrosajan.
+     Pienten virheiden johdosta Jani jäi kuitenkin tällä kertaa toiseksi. Kolmanneksi ajoi Ville, joka pahan spinnauksen vuoksi jäi kärki kaksikon kamppailuista. Neljänneksi ajoi
+     Petteri. Petterin kilpailuna alun sipnnaukset maksoivat viikonlopun menestyksen. Viimeisenä maaliin ajoi Toni. Tonin vauhti ei riittänyt kärkikamppailuun Imatralla, ehkä
+     Vantaan rata sopii Tonille paremmin.</p>
+  <img src="img/posse.jpg" class="img-fluid rounded" alt="posse">
+</div>
+
+
+
+
+
+{{>footer}}

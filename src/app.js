@@ -3,6 +3,8 @@ const express = require("express")
 const hbs = require("hbs")
 const imatra = require("./imatra.json")
 const vantaa = require("./vantaa.json")
+let imatraOtsikko = "Imatran GP"
+let vantaaOtsikko = "Vantaan GP"
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -61,6 +63,18 @@ app.get("/tulokset", (req, res) =>{
 
 app.get("/osakilpailut", (req, res) =>{
   res.render("osakilpailut")
+})
+
+app.get("/imatra", (req, res) =>{
+  res.render("imatra",{
+    otsikko: imatraOtsikko
+  })
+})
+
+app.get("/vantaa", (req, res) =>{
+  res.render("vantaa",{
+    otsikko: vantaaOtsikko
+  })
 })
 
 app.get("/kuljettajat", (req, res) =>{
