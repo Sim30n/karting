@@ -44,20 +44,26 @@ app.get("/tulokset", (req, res) =>{
     imatraAaikaJani: imatra.driver[3].qualTime,
     imatraAaikaToni: imatra.driver[4].qualTime,
     vantaaPetteri: vantaa.driver[0].name,
-    vantaaVille: vantaa.driver[1].name,
+    vantaaVilleL: vantaa.driver[1].name,
     vantaaLauri: vantaa.driver[2].name,
     vantaaJani: vantaa.driver[3].name,
-    vantaaToni: vantaa.driver[4].name,
+    vantaaMika: vantaa.driver[4].name,
+    vantaaJakala: vantaa.driver[5].name,
+    vantaaJuha: vantaa.driver[6].name,
     vantaaKisaAikaPetteri: vantaa.driver[0].circuitTime,
-    vantaaKisaAikaVille: vantaa.driver[1].circuitTime,
+    vantaaKisaAikaVilleL: vantaa.driver[1].circuitTime,
     vantaaKisaAikaLauri: vantaa.driver[2].circuitTime,
     vantaaKisaAikaJani: vantaa.driver[3].circuitTime,
-    vantaaKisaAikaToni: vantaa.driver[4].circuitTime,
+    vantaaKisaAikaMika: vantaa.driver[4].circuitTime,
+    vantaaKisaAikaJakala: vantaa.driver[5].circuitTime,
+    vantaaKisaAikaJuha: vantaa.driver[6].circuitTime,
     vantaaAaikaPetteri: vantaa.driver[0].qualTime,
-    vantaaAaikaVille: vantaa.driver[1].qualTime,
+    vantaaAaikaVilleL: vantaa.driver[1].qualTime,
     vantaaAaikaLauri: vantaa.driver[2].qualTime,
     vantaaAaikaJani: vantaa.driver[3].qualTime,
-    vantaaAaikaToni: vantaa.driver[4].qualTime
+    vantaaAaikaMika: vantaa.driver[4].qualTime,
+    vantaaAaikaJakala: vantaa.driver[5].qualTime,
+    vantaaAaikaJuha: vantaa.driver[6].qualTime
   })
 })
 
