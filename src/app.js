@@ -87,6 +87,46 @@ app.get("/kuljettajat", (req, res) =>{
   res.render("kuljettajat")
 })
 
+app.get("/petteri", (req, res) =>{
+  res.render("petteri")
+})
+
+app.get("/lauri", (req, res) =>{
+  res.render("lauri")
+})
+
+app.get("/jamppa", (req, res) =>{
+  res.render("jamppa")
+})
+
+app.get("/villes", (req, res) =>{
+  res.render("villes")
+})
+
+app.get("/toni", (req, res) =>{
+  res.render("toni")
+})
+
+app.get("/juha", (req, res) =>{
+  res.render("juha")
+})
+
+app.get("/jakala", (req, res) =>{
+  res.render("jakala")
+})
+
+app.get("/mika", (req, res) =>{
+  res.render("mika")
+})
+
+app.get("/villel", (req, res) =>{
+  res.render("villel")
+})
+
+
+
+
+
 app.listen(port, () => {
   console.log("Server is up on port " + port)
 })

@@ -1,0 +1,126 @@
+{{>header}}
+<!-- ChartJS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">D1 Karting</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Etusivu</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/kuljettajat">Kuljettajat</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/osakilpailut">Osakilpailut</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/tulokset">Tulokset<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div id="aikaTaulukkoImatra" class="container" style="margin-top:100px">
+  <h1 style="text-align: center">JUHA</h1>
+  <table class="table">
+  <thead>
+      <tr>
+        <th scope="col">Osakilpailu</th>
+        <th scope="col">Sijoitus</th>
+        <th scope="col">Paras aika</th>
+        <th scope="col">Pisteet</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Imatra</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">Vantaa</th>
+        <td>7</td>
+        <td>44.510</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <th scope="row">3.Osakilpailu</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">4.Osakilpailu</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">5.Osakilpailu</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <canvas id="sijoitus"></canvas>
+  <div style="margin-top:25px;">
+    <a href="/toni"><< Edellinen</a>
+    <a style="float: right;" href="/jakala">Seuraava >></a>
+  </div>
+</div>
+
+<canvas id="sijoitus" width="400" height="400"></canvas>
+<script>
+var ctx = document.getElementById('sijoitus');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Imatra', 'Vantaa', '3.Osakilpailu', '4.Osakilpailu', '5.Osakilpailu', '6.Osakilpailu'],
+        datasets: [{
+            label: 'Sijoitus',
+            fill: false,
+            data: [, 7, , , , ],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    reverse: true,
+                    steps: 10,
+                    stepSize: 1,
+                    max: 7,
+                    min:1
+                }
+            }]
+        }
+    }
+});
+</script>
+
+{{>footer}}
