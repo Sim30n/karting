@@ -310,6 +310,7 @@
       </tr>
     </tbody>
   </table>
+  <canvas id="pisteKuvaaja"></canvas>
 </div>
 
 
@@ -329,6 +330,7 @@
     document.getElementById("kisaTaulukkoVantaa").style.display = "none"
     document.getElementById("aikaTaulukkoVantaa").style.display = "none"
     document.getElementById("pisteTaulukko").style.display = "none"
+    document.getElementById("pisteKuvaaja").style.display = "none"
   } else {
     x.className = "list-group-item list-group-item-action";
   }
@@ -445,6 +447,7 @@ document.getElementById("vantaa").addEventListener("click", moreInfoVantaa);
     document.getElementById("kisaTaulukkoVantaa").style.display = "block"
     document.getElementById("aikaTaulukkoVantaa").style.display = "block"
     document.getElementById("pisteTaulukko").style.display = "none"
+    document.getElementById("pisteKuvaaja").style.display = "none"
   } else {
     x.className = "list-group-item list-group-item-action";
   }
@@ -577,10 +580,54 @@ document.getElementById("pistetilanne").addEventListener("click", moreInfoPiste)
     document.getElementById("kisaTaulukkoVantaa").style.display = "none"
     document.getElementById("aikaTaulukkoVantaa").style.display = "none"
     document.getElementById("pisteTaulukko").style.display = "block"
+    document.getElementById("pisteKuvaaja").style.display = "block"
   } else {
     x.className = "list-group-item list-group-item-action";
   }
+  var ctx = document.getElementById('pisteKuvaaja');
+  var chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: ['Lauri', 'Jani', 'Petteri', 'Jäkälä', 'Mika', 'Ville.S', 'Toni', 'Ville.L', 'Juha'],
+          datasets: [{
+              label: '# Pisteet',
+              data: [35, 31, 27, 26, 18, 15, 10, 8, 6],
+              backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)',
+                  'rgba(153, 102, 255, 0.2)',
+                  'rgba(255, 159, 64, 0.2)',
+                  'rgb(255, 64, 0, 0.2)',
+                  'rgb(255, 0, 191, 0.2)',
+                  'rgb(0, 255, 191, 0.2)'
 
+                ],
+                borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 159, 64, 1)',
+                  'rgb(255, 64, 0, 1)',
+                  'rgb(255, 0, 191, 1)',
+                  'rgb(0, 255, 191, 1)'
+                ],
+                borderWidth: 1
+              }]
+            },
+            options: {
+              scales: {
+                yAxes: [{
+                  ticks: {
+                      beginAtZero: false
+                    }
+                  }]
+                }
+              }
+            });
 }
 
 </script>
@@ -590,6 +637,7 @@ document.getElementById("aikaTaulukkoImatra").style.display = "none"
 document.getElementById("kisaTaulukkoVantaa").style.display = "none"
 document.getElementById("aikaTaulukkoVantaa").style.display = "none"
 document.getElementById("pisteTaulukko").style.display = "none"
+document.getElementById("pisteKuvaaja").style.display = "none"
 </script>
 
 
