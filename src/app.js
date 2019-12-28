@@ -3,8 +3,10 @@ const express = require("express")
 const hbs = require("hbs")
 const imatra = require("./imatra.json")
 const vantaa = require("./vantaa.json")
+const lahti = require("./lahti.json")
 let imatraOtsikko = "Imatran GP"
 let vantaaOtsikko = "Vantaan GP"
+let lahtiOtsikko = "Lahden GP"
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -63,7 +65,31 @@ app.get("/tulokset", (req, res) =>{
     vantaaAaikaJani: vantaa.driver[3].qualTime,
     vantaaAaikaMika: vantaa.driver[4].qualTime,
     vantaaAaikaJakala: vantaa.driver[5].qualTime,
-    vantaaAaikaJuha: vantaa.driver[6].qualTime
+    vantaaAaikaJuha: vantaa.driver[6].qualTime,
+    lahtiPetteri: lahti.driver[0].name,
+    lahtiVilleS: lahti.driver[1].name,
+    lahtiLauri: lahti.driver[2].name,
+    lahtiJani: lahti.driver[3].name,
+    lahtiMika: lahti.driver[4].name,
+    lahtiJoni: lahti.driver[5].name,
+    lahtiJere: lahti.driver[6].name,
+    lahtiJuha: lahti.driver[7].name,
+    lahtiKisaAikaPetteri: lahti.driver[0].circuitTime,
+    lahtiKisaAikaVilleS: lahti.driver[1].circuitTime,
+    lahtiKisaAikaLauri: lahti.driver[2].circuitTime,
+    lahtiKisaAikaJani: lahti.driver[3].circuitTime,
+    lahtiKisaAikaMika: lahti.driver[4].circuitTime,
+    lahtiKisaAikaJoni: lahti.driver[5].circuitTime,
+    lahtiKisaAikaJere: lahti.driver[6].circuitTime,
+    lahtiKisaAikaJuha: lahti.driver[7].circuitTime,
+    lahtiAaikaPetteri: lahti.driver[0].qualTime,
+    lahtiAaikaVilleS: lahti.driver[1].qualTime,
+    lahtiAaikaLauri: lahti.driver[2].qualTime,
+    lahtiAaikaJani: lahti.driver[3].qualTime,
+    lahtiAaikaMika: lahti.driver[4].qualTime,
+    lahtiAaikaJoni: lahti.driver[5].qualTime,
+    lahtiAaikaJere: lahti.driver[6].qualTime,
+    lahtiAaikaJuha: lahti.driver[7].qualTime
   })
 })
 
@@ -80,6 +106,12 @@ app.get("/imatra", (req, res) =>{
 app.get("/vantaa", (req, res) =>{
   res.render("vantaa",{
     otsikko: vantaaOtsikko
+  })
+})
+
+app.get("/lahti", (req, res) =>{
+  res.render("lahti",{
+    otsikko: lahtiOtsikko
   })
 })
 

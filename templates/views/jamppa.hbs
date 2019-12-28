@@ -51,10 +51,10 @@
         <td>12</td>
       </tr>
       <tr>
-        <th scope="row">3.Osakilpailu</th>
-        <td></td>
-        <td></td>
-        <td></td>
+        <th scope="row">Lahti</th>
+        <td>2</td>
+        <td>27.453</td>
+        <td>18</td>
       </tr>
       <tr>
         <th scope="row">4.Osakilpailu</th>
@@ -89,11 +89,11 @@ var ctx = document.getElementById('sijoitus');
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ['Imatra', 'Vantaa', '3.Osakilpailu', '4.Osakilpailu', '5.Osakilpailu', '6.Osakilpailu'],
+        labels: ['Imatra', 'Vantaa', 'Lahti', '4.Osakilpailu', '5.Osakilpailu', '6.Osakilpailu'],
         datasets: [{
             label: 'Sijoitus',
             fill: false,
-            data: [2, 4, , , , ],
+            data: [2, 4, 2, , , ],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',

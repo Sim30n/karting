@@ -1,0 +1,41 @@
+{{>header}}
+<!-- ChartJS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">D1 Karting</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Etusivu</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/kuljettajat">Kuljettajat<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/osakilpailut">Osakilpailut</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/tulokset">Tulokset</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="container" style="text-align:center; margin-top:200px; margin-bottom:50px ">
+  <h1 class="mt-5">{{otsikko}}</h1>
+  <p class="lead">Lahden GP ajettiin sisäradalla.
+                  Mukana taas uusia kuljettajia.</p>
+  <p>Vantaan GPn voiton vei Lauri, toiseksi ajoi Jani, ja kolmanneksi Ville.S. </p>
+  <img src="https://images.unsplash.com/photo-1496081406770-b864c2050751?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80" class="img-fluid rounded" alt="posse">
+</div>
+
+
+
+
+
+{{>footer}}
