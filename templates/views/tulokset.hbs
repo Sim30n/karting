@@ -2,6 +2,7 @@
 <!-- ChartJS -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
+<!-- navbar -->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
   <a class="navbar-brand" href="#">D1 Karting</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,13 +26,14 @@
   </div>
 </nav>
 
+<!-- kisataulukko -->
 <div class="container">
   <div class="list-group" style="text-align:center; margin-top:100px">
     <a href="#" id="imatra" class="list-group-item list-group-item-action">Imatra 14.9.2019</a>
     <a href="#" id="vantaa" class="list-group-item list-group-item-action">Vantaa 12.10.2019</a>
     <a href="#" id="lahti" class="list-group-item list-group-item-action">Lahti 28.12.2019</a>
-    <a href="#" class="list-group-item list-group-item-action">4. Osakilpailu</a>
-    <a href="#" class="list-group-item list-group-item-action">5. Osakilpailu</a>
+    <a href="#" id="pw1" class="list-group-item list-group-item-action">Power Park I 29.8.2020</a>
+    <a href="#" id="pw2" class="list-group-item list-group-item-action">Power Park II 29.8.2020</a>
     <a href="#" class="list-group-item list-group-item-action">6. Osakilpailu</a>
     <a href="#" id ="pistetilanne" class="list-group-item list-group-item-action">Pistetilanne</a>
   </div>
@@ -377,74 +379,289 @@
       <tr>
         <th scope="row">1</th>
         <td>Lauri</td>
-        <td>61</td>
+        <td>71</td>
         <td></td>
       </tr>
       <tr>
         <th scope="row">2</th>
         <td>Jani</td>
-        <td>49</td>
-        <td>-12</td>
+        <td>61</td>
+        <td>-10</td>
       </tr>
       <tr>
         <th scope="row">3</th>
-        <td>Petteri</td>
-        <td>39</td>
-        <td>-22</td>
+        <td>Ville.S</td>
+        <td>56</td>
+        <td>-15</td>
       </tr>
       <tr>
         <th scope="row">4</th>
-        <td>Ville.S</td>
-        <td>30</td>
-        <td>-31</td>
+        <td>Mika</td>
+        <td>56</td>
+        <td>-15</td>
       </tr>
       <tr>
         <th scope="row">5</th>
-        <td>Mika</td>
-        <td>26</td>
-        <td>-35</td>
+        <td>Petteri</td>
+        <td>49</td>
+        <td>-22</td>
       </tr>
       <tr>
         <th scope="row">6</th>
-        <td>Jäkälä</td>
-        <td>26</td>
-        <td>-35</td>
+        <td>Joni</td>
+        <td>17</td>
+        <td>-54</td>
       </tr>
       <tr>
         <th scope="row">7</th>
         <td>Toni</td>
         <td>10</td>
-        <td>-51</td>
+        <td>-61</td>
       </tr>
       <tr>
         <th scope="row">8</th>
         <td>Juha</td>
         <td>10</td>
-        <td>-51</td>
+        <td>-61</td>
       </tr>
       <tr>
         <th scope="row">9</th>
         <td>Jere</td>
         <td>8</td>
-        <td>-53</td>
+        <td>-63</td>
       </tr>
       <tr>
         <th scope="row">10</th>
         <td>Ville.L</td>
         <td>6</td>
-        <td>-55</td>
-      </tr>
-      <tr>
-        <th scope="row">11</th>
-        <td>Joni</td>
-        <td>4</td>
-        <td>-57</td>
+        <td>-65</td>
       </tr>
     </tbody>
   </table>
   <canvas id="pisteKuvaaja"></canvas>
 </div>
 
+<div id="aikaTaulukkoPw1" class="container" style="margin-top:100px">
+  <h1 style="text-align: center">AIKA-AJOT</h1>
+  <table class="table">
+  <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nimi</th>
+        <th scope="col">Paras aika</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Jouni</td>
+        <td>54.103</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Antti</td>
+        <td>54.209</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Ville.S</td>
+        <td>54.400</td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>Lauri</td>
+        <td>54.427</td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>Mika</td>
+        <td>54.867</td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td>Tommi</td>
+        <td>54.914</td>
+      </tr>
+      <tr>
+        <th scope="row">7</th>
+        <td>Jani</td>
+        <td>55.277</td>
+      </tr>
+      <tr>
+        <th scope="row">8</th>
+        <td>Joni</td>
+        <td>55.597</td>
+      </tr>
+      <tr>
+        <th scope="row">9</th>
+        <td>Petteri</td>
+        <td>55.820</td>
+      </tr>
+      <tr>
+        <th scope="row">10</th>
+        <td>Juha.K</td>
+        <td>56.686</td>
+      </tr>
+    </tbody>
+  </table>
+  <canvas id="myChartAikaPw1"></canvas>
+</div>
+
+<div id="kisaTaulukkoPw1" class="container" style="margin-top:100px; margin-bottom:100px">
+  <h1 style="text-align: center">KISA</h1>
+  <table class="table">
+  <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nimi</th>
+        <th scope="col">Paras aika</th>
+        <th scope="col">Pisteet</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Jouni</td>
+        <td><b>54.684</b></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Ville.S</td>
+        <td>54.696</td>
+        <td>18</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Antti</td>
+        <td>54.790</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>Mika</td>
+        <td>55.414</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>Jani</td>
+        <td>55.039</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td>Petteri</td>
+        <td>56.028</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <th scope="row">7</th>
+        <td>Lauri</td>
+        <td>55.938</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <th scope="row">8</th>
+        <td>Juha.K</td>
+        <td>56.189</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">9</th>
+        <td>Tommi</td>
+        <td>55.421</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">10</th>
+        <td>Joni</td>
+        <td>56.352</td>
+        <td>2</td>
+      </tr>
+    </tbody>
+  </table>
+  <canvas id="myChartKisaPw1"></canvas>
+</div>
+
+<div id="kisaTaulukkoPw2" class="container" style="margin-top:100px; margin-bottom:100px">
+  <h1 style="text-align: center">KISA</h1>
+  <table class="table">
+  <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nimi</th>
+        <th scope="col">Paras aika</th>
+        <th scope="col">Pisteet</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Jouni</td>
+        <td>45.574</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Mika</td>
+        <td>48.743</td>
+        <td>18</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Juha</td>
+        <td>47.404</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>Joni</td>
+        <td>47.953</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>Tommi</td>
+        <td>48.540</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td>Ville.S</td>
+        <td>47.797</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <th scope="row">7</th>
+        <td>Antti</td>
+        <td>50.146</td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">8</th>
+        <td>Lauri</td>
+        <td>48.662</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <th scope="row">9</th>
+        <td>Petteri</td>
+        <td>49.481</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th scope="row">10</th>
+        <td>Jani</td>
+        <td><b>44.705</b></td>
+        <td>2</td>
+      </tr>
+    </tbody>
+  </table>
+  <canvas id="myChartKisaPw2"></canvas>
+</div>
+
+<!-- imatra -->
 <script type="text/javascript">
   document.getElementById("imatra").addEventListener("click", moreInfoImatra);
   function moreInfoImatra(){
@@ -452,11 +669,15 @@
   v = document.getElementById("vantaa")
   l = document.getElementById("lahti")
   p = document.getElementById("pistetilanne")
+  pw1 = document.getElementById("pw1")
+  pw2 = document.getElementById("pw2")
   if (x.className === "list-group-item list-group-item-action") {
     x.className = "list-group-item list-group-item-action active border-secondary bg-secondary";
     v.className = "list-group-item list-group-item-action"
     l.className = "list-group-item list-group-item-action"
     p.className = "list-group-item list-group-item-action"
+    pw1.className = "list-group-item list-group-item-action"
+    pw2.className = "list-group-item list-group-item-action"
     document.getElementById("kisaTaulukkoImatra").style.display = "block"
     document.getElementById("aikaTaulukkoImatra").style.display = "block"
     document.getElementById("kisaTaulukkoVantaa").style.display = "none"
@@ -465,6 +686,9 @@
     document.getElementById("aikaTaulukkoLahti").style.display = "none"
     document.getElementById("pisteTaulukko").style.display = "none"
     document.getElementById("pisteKuvaaja").style.display = "none"
+    document.getElementById("aikaTaulukkoPw1").style.display = "none"
+    document.getElementById("kisaTaulukkoPw1").style.display = "none"
+    document.getElementById("kisaTaulukkoPw2").style.display = "none"
   } else {
     x.className = "list-group-item list-group-item-action";
   }
@@ -565,6 +789,7 @@
 }
 </script>
 
+<!-- vantaa -->
 <script type="text/javascript">
   document.getElementById("vantaa").addEventListener("click", moreInfoVantaa);
   function moreInfoVantaa(){
@@ -572,11 +797,15 @@
   i = document.getElementById("imatra")
   l = document.getElementById("lahti")
   p = document.getElementById("pistetilanne")
+  pw1 = document.getElementById("pw1")
+  pw2 = document.getElementById("pw2")
   if (x.className === "list-group-item list-group-item-action") {
     x.className = "list-group-item list-group-item-action active border-secondary bg-secondary";
     i.className = "list-group-item list-group-item-action"
     l.className = "list-group-item list-group-item-action"
     p.className = "list-group-item list-group-item-action"
+    pw1.className = "list-group-item list-group-item-action"
+    pw2.className = "list-group-item list-group-item-action"
     document.getElementById("kisaTaulukkoImatra").style.display = "none"
     document.getElementById("aikaTaulukkoImatra").style.display = "none"
     document.getElementById("kisaTaulukkoVantaa").style.display = "block"
@@ -585,6 +814,9 @@
     document.getElementById("aikaTaulukkoLahti").style.display = "none"
     document.getElementById("pisteTaulukko").style.display = "none"
     document.getElementById("pisteKuvaaja").style.display = "none"
+    document.getElementById("aikaTaulukkoPw1").style.display = "none"
+    document.getElementById("kisaTaulukkoPw1").style.display = "none"
+    document.getElementById("kisaTaulukkoPw2").style.display = "none"
   } else {
     x.className = "list-group-item list-group-item-action";
   }
@@ -701,6 +933,7 @@
 }
 </script>
 
+<!-- lahti -->
 <script type="text/javascript">
   document.getElementById("lahti").addEventListener("click", moreInfoLahti);
   function moreInfoLahti(){
@@ -708,11 +941,15 @@
   v = document.getElementById("vantaa")
   i = document.getElementById("imatra")
   p = document.getElementById("pistetilanne")
+  pw1 = document.getElementById("pw1")
+  pw2 = document.getElementById("pw2")
   if (x.className === "list-group-item list-group-item-action") {
     x.className = "list-group-item list-group-item-action active border-secondary bg-secondary";
     v.className = "list-group-item list-group-item-action"
     i.className = "list-group-item list-group-item-action"
     p.className = "list-group-item list-group-item-action"
+    pw1.className = "list-group-item list-group-item-action"
+    pw2.className = "list-group-item list-group-item-action"
     document.getElementById("kisaTaulukkoImatra").style.display = "none"
     document.getElementById("aikaTaulukkoImatra").style.display = "none"
     document.getElementById("kisaTaulukkoVantaa").style.display = "none"
@@ -721,6 +958,9 @@
     document.getElementById("aikaTaulukkoLahti").style.display = "block"
     document.getElementById("pisteTaulukko").style.display = "none"
     document.getElementById("pisteKuvaaja").style.display = "none"
+    document.getElementById("aikaTaulukkoPw1").style.display = "none"
+    document.getElementById("kisaTaulukkoPw1").style.display = "none"
+    document.getElementById("kisaTaulukkoPw2").style.display = "none"
   } else {
     x.className = "list-group-item list-group-item-action";
   }
@@ -851,6 +1091,290 @@
 }
 </script>
 
+<!-- pw1 -->
+<script type="text/javascript">
+  document.getElementById("pw1").addEventListener("click", moreInfoPw1);
+  function moreInfoPw1(){
+  x = document.getElementById("pw1")
+  v = document.getElementById("vantaa")
+  i = document.getElementById("imatra")
+  p = document.getElementById("pistetilanne")
+  pw1 = document.getElementById("lahti")
+  pw2 = document.getElementById("pw2")
+  if (x.className === "list-group-item list-group-item-action") {
+    x.className = "list-group-item list-group-item-action active border-secondary bg-secondary";
+    v.className = "list-group-item list-group-item-action"
+    i.className = "list-group-item list-group-item-action"
+    p.className = "list-group-item list-group-item-action"
+    pw1.className = "list-group-item list-group-item-action"
+    pw2.className = "list-group-item list-group-item-action"
+    document.getElementById("kisaTaulukkoImatra").style.display = "none"
+    document.getElementById("aikaTaulukkoImatra").style.display = "none"
+    document.getElementById("kisaTaulukkoVantaa").style.display = "none"
+    document.getElementById("aikaTaulukkoVantaa").style.display = "none"
+    document.getElementById("kisaTaulukkoLahti").style.display = "none"
+    document.getElementById("aikaTaulukkoLahti").style.display = "none"
+    document.getElementById("pisteTaulukko").style.display = "none"
+    document.getElementById("pisteKuvaaja").style.display = "none"
+    document.getElementById("aikaTaulukkoPw1").style.display = "block"
+    document.getElementById("kisaTaulukkoPw1").style.display = "block"
+    document.getElementById("kisaTaulukkoPw2").style.display = "none"
+  } else {
+    x.className = "list-group-item list-group-item-action";
+  }
+  var ctx = document.getElementById('myChartKisaPw1').getContext('2d');
+  var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'line',
+
+      // The data for our dataset
+      data: {
+        labels: ['1', '2', '3', '4', '5', '6'],
+        datasets: [{
+            label:'{{pw1Petteri}}',
+            fill: false,
+            borderColor: 'rgb(0,0,205)',
+            data: [{{pw1KisaAikaPetteri}}]
+        },{
+            label:'{{pw1VilleS}}',
+            fill: false,
+            borderColor: 'rgb(165,42,42)',
+            data: [{{pw1KisaAikaVilleS}}]
+        },{
+            label:'{{pw1Lauri}}',
+            fill: false,
+            borderColor: 'rgb(46,139,87)',
+            data: [{{pw1KisaAikaLauri}}]
+        },{
+            label:'{{pw1Jani}}',
+            fill: false,
+            borderColor: 'rgb(138,43,226)',
+            data: [{{pw1KisaAikaJani}}]
+        },{
+            label:'{{pw1Mika}}',
+            fill: false,
+            borderColor: 'rgb(205,133,63)',
+            data: [{{pw1KisaAikaMika}}]
+        },{
+            label:'{{pw1JuhaK}}',
+            fill: false,
+            borderColor: 'rgb(155,143,23)',
+            data: [{{pw1KisaAikaJuhaK}}]
+        },{
+            label:'{{pw1Joni}}',
+            fill: false,
+            borderColor: 'rgb(105,163,33)',
+            data: [{{pw1KisaAikaJoni}}]
+        },{
+            label:'{{pw1Jouni}}',
+            fill: false,
+            borderColor: 'rgb(225,193,23)',
+            data: [{{pw1KisaAikaJouni}}]
+        },{
+            label:'{{pw1Tommi}}',
+            fill: false,
+            borderColor: 'rgb(225,193,23)',
+            data: [{{pw1KisaAikaTommi}}]
+        },{
+            label:'{{pw1Antti}}',
+            fill: false,
+            borderColor: 'rgb(225,193,23)',
+            data: [{{pw1KisaAikaAntti}}]
+        }]
+      },
+      // Configuration options go here
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              reverse: true,
+            }
+          }]
+        }
+      }
+  });
+
+  var ctx = document.getElementById('myChartAikaPw1').getContext('2d');
+  var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'line',
+
+      // The data for our dataset
+      data: {
+          labels: ['1', '2', '3', '4', '5', '6', '7','8','9','10'],
+          datasets: [{
+              label:'{{pw1Petteri}}',
+              fill: false,
+              borderColor: 'rgb(0,0,205)',
+              data: [{{pw1AaikaPetteri}}]
+          },{
+              label:'{{pw1VilleS}}',
+              fill: false,
+              borderColor: 'rgb(165,42,42)',
+              data: [{{pw1AaikaVilleS}}]
+          },{
+              label:'{{pw1Lauri}}',
+              fill: false,
+              borderColor: 'rgb(46,139,87)',
+              data: [{{pw1AaikaLauri}}]
+          },{
+              label:'{{pw1Jani}}',
+              fill: false,
+              borderColor: 'rgb(138,43,226)',
+              data: [{{pw1AaikaJani}}]
+          },{
+              label:'{{pw1Mika}}',
+              fill: false,
+              borderColor: 'rgb(205,133,63)',
+              data: [{{pw1AaikaMika}}]
+          },{
+              label:'{{pw1JuhaK}}',
+              fill: false,
+              borderColor: 'rgb(155,143,23)',
+              data: [{{pw1AaikaJuhaK}}]
+          },{
+              label:'{{pw1Joni}}',
+              fill: false,
+              borderColor: 'rgb(105,163,33)',
+              data: [{{pw1AaikaJoni}}]
+          },{
+              label:'{{pw1Jouni}}',
+              fill: false,
+              borderColor: 'rgb(225,193,23)',
+              data: [{{pw1AaikaJouni}}]
+          },{
+              label:'{{pw1Tommi}}',
+              fill: false,
+              borderColor: 'rgb(225,193,23)',
+              data: [{{pw1AaikaTommi}}]
+          },{
+              label:'{{pw1Antti}}',
+              fill: false,
+              borderColor: 'rgb(225,193,23)',
+              data: [{{pw1AaikaAntti}}]
+          }]
+      },
+
+      // Configuration options go here
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              reverse: true,
+            }
+          }]
+        }
+      }
+  });
+}
+</script>
+
+<!-- pw2 -->
+<script type="text/javascript">
+  document.getElementById("pw2").addEventListener("click", moreInfoPw2);
+  function moreInfoPw2(){
+  x = document.getElementById("pw2")
+  v = document.getElementById("vantaa")
+  i = document.getElementById("imatra")
+  p = document.getElementById("pistetilanne")
+  pw1 = document.getElementById("pw1")
+  pw2 = document.getElementById("lahti")
+  if (x.className === "list-group-item list-group-item-action") {
+    x.className = "list-group-item list-group-item-action active border-secondary bg-secondary";
+    v.className = "list-group-item list-group-item-action"
+    i.className = "list-group-item list-group-item-action"
+    p.className = "list-group-item list-group-item-action"
+    pw1.className = "list-group-item list-group-item-action"
+    pw2.className = "list-group-item list-group-item-action"
+    document.getElementById("kisaTaulukkoImatra").style.display = "none"
+    document.getElementById("aikaTaulukkoImatra").style.display = "none"
+    document.getElementById("kisaTaulukkoVantaa").style.display = "none"
+    document.getElementById("aikaTaulukkoVantaa").style.display = "none"
+    document.getElementById("kisaTaulukkoLahti").style.display = "none"
+    document.getElementById("aikaTaulukkoLahti").style.display = "none"
+    document.getElementById("pisteTaulukko").style.display = "none"
+    document.getElementById("pisteKuvaaja").style.display = "none"
+    document.getElementById("aikaTaulukkoPw1").style.display = "none"
+    document.getElementById("kisaTaulukkoPw1").style.display = "none"
+    document.getElementById("kisaTaulukkoPw2").style.display = "block"
+  } else {
+    x.className = "list-group-item list-group-item-action";
+  }
+  var ctx = document.getElementById('myChartKisaPw2').getContext('2d');
+  var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'line',
+
+      // The data for our dataset
+      data: {
+        labels: ['1', '2', '3', '4', '5', '6', '7','8','9','10'],
+        datasets: [{
+            label:'{{pw2Petteri}}',
+            fill: false,
+            borderColor: 'rgb(0,0,205)',
+            data: [{{pw2KisaAikaPetteri}}]
+        },{
+            label:'{{pw2VilleS}}',
+            fill: false,
+            borderColor: 'rgb(165,42,42)',
+            data: [{{pw2KisaAikaVilleS}}]
+        },{
+            label:'{{pw2Lauri}}',
+            fill: false,
+            borderColor: 'rgb(46,139,87)',
+            data: [{{pw2KisaAikaLauri}}]
+        },{
+            label:'{{pw2Jani}}',
+            fill: false,
+            borderColor: 'rgb(138,43,226)',
+            data: [{{pw2KisaAikaJani}}]
+        },{
+            label:'{{pw2Mika}}',
+            fill: false,
+            borderColor: 'rgb(205,133,63)',
+            data: [{{pw2KisaAikaMika}}]
+        },{
+            label:'{{pw2JuhaK}}',
+            fill: false,
+            borderColor: 'rgb(155,143,23)',
+            data: [{{pw2KisaAikaJuhaK}}]
+        },{
+            label:'{{pw2Joni}}',
+            fill: false,
+            borderColor: 'rgb(105,163,33)',
+            data: [{{pw2KisaAikaJoni}}]
+        },{
+            label:'{{pw2Jouni}}',
+            fill: false,
+            borderColor: 'rgb(225,193,23)',
+            data: [{{pw2KisaAikaJouni}}]
+        },{
+            label:'{{pw2Tommi}}',
+            fill: false,
+            borderColor: 'rgb(225,193,23)',
+            data: [{{pw2KisaAikaTommi}}]
+        },{
+            label:'{{pw2Antti}}',
+            fill: false,
+            borderColor: 'rgb(225,193,23)',
+            data: [{{pw2KisaAikaAntti}}]
+        }]
+      },
+      // Configuration options go here
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              reverse: true,
+            }
+          }]
+        }
+      }
+  });
+}
+</script>
+
+<!-- pisteet -->
 <script type="text/javascript">
   document.getElementById("pistetilanne").addEventListener("click", moreInfoPiste);
   function moreInfoPiste(){
@@ -858,11 +1382,15 @@
   v = document.getElementById("vantaa")
   i = document.getElementById("imatra")
   l = document.getElementById("lahti")
+  pw1 = document.getElementById("pw1")
+  pw2 = document.getElementById("pw2")
   if (x.className === "list-group-item list-group-item-action") {
     x.className = "list-group-item list-group-item-action active border-secondary bg-secondary";
     i.className = "list-group-item list-group-item-action"
     v.className = "list-group-item list-group-item-action"
     l.className = "list-group-item list-group-item-action"
+    pw1.className = "list-group-item list-group-item-action"
+    pw2.className = "list-group-item list-group-item-action"
     document.getElementById("kisaTaulukkoImatra").style.display = "none"
     document.getElementById("aikaTaulukkoImatra").style.display = "none"
     document.getElementById("kisaTaulukkoVantaa").style.display = "none"
@@ -871,6 +1399,9 @@
     document.getElementById("aikaTaulukkoLahti").style.display = "none"
     document.getElementById("pisteTaulukko").style.display = "block"
     document.getElementById("pisteKuvaaja").style.display = "block"
+    document.getElementById("aikaTaulukkoPw1").style.display = "none"
+    document.getElementById("kisaTaulukkoPw1").style.display = "none"
+    document.getElementById("kisaTaulukkoPw2").style.display = "none"
   } else {
     x.className = "list-group-item list-group-item-action";
   }
@@ -878,10 +1409,10 @@
   var chart = new Chart(ctx, {
       type: 'bar',
       data: {
-          labels: ['Lauri', 'Jani', 'Petteri', 'Ville.S', 'Mika', 'Jäkälä', 'Toni', 'Juha', 'Jere', 'Ville.L', 'Joni'],
+          labels: ['Lauri', 'Jani', 'Ville.S', 'Mika', 'Petteri', 'Joni', 'Toni', 'Juha', 'Jere', 'Ville.L'],
           datasets: [{
               label: '# Pisteet',
-              data: [61, 49, 39, 30, 26, 26, 10, 10, 10, 8, 6],
+              data: [71, 61, 56, 56, 49, 17, 10, 10, 8, 6],
               backgroundColor: [
                   'rgba(255, 99, 132, 0.2)',
                   'rgba(54, 162, 235, 0.2)',
@@ -933,6 +1464,9 @@
   document.getElementById("aikaTaulukkoLahti").style.display = "none"
   document.getElementById("pisteTaulukko").style.display = "none"
   document.getElementById("pisteKuvaaja").style.display = "none"
+  document.getElementById("aikaTaulukkoPw1").style.display = "none"
+  document.getElementById("kisaTaulukkoPw1").style.display = "none"
+  document.getElementById("kisaTaulukkoPw2").style.display = "none"
 </script>
 
 {{>footer}}

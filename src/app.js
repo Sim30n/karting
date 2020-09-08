@@ -4,6 +4,8 @@ const hbs = require("hbs")
 const imatra = require("./imatra.json")
 const vantaa = require("./vantaa.json")
 const lahti = require("./lahti.json")
+const pw1 = require("./pw1.json")
+const pw2 = require("./pw2.json")
 let imatraOtsikko = "Imatran GP"
 let vantaaOtsikko = "Vantaan GP"
 let lahtiOtsikko = "Lahden GP"
@@ -30,6 +32,7 @@ app.get("", (req, res) =>{
 
 app.get("/tulokset", (req, res) =>{
   res.render("tulokset", {
+    // imatra
     imatraPetteri: imatra.driver[0].name,
     imatraVille: imatra.driver[1].name,
     imatraLauri: imatra.driver[2].name,
@@ -45,6 +48,7 @@ app.get("/tulokset", (req, res) =>{
     imatraAaikaLauri: imatra.driver[2].qualTime,
     imatraAaikaJani: imatra.driver[3].qualTime,
     imatraAaikaToni: imatra.driver[4].qualTime,
+    // vantaa
     vantaaPetteri: vantaa.driver[0].name,
     vantaaVilleL: vantaa.driver[1].name,
     vantaaLauri: vantaa.driver[2].name,
@@ -66,6 +70,7 @@ app.get("/tulokset", (req, res) =>{
     vantaaAaikaMika: vantaa.driver[4].qualTime,
     vantaaAaikaJakala: vantaa.driver[5].qualTime,
     vantaaAaikaJuha: vantaa.driver[6].qualTime,
+    // lahti
     lahtiPetteri: lahti.driver[0].name,
     lahtiVilleS: lahti.driver[1].name,
     lahtiLauri: lahti.driver[2].name,
@@ -89,7 +94,59 @@ app.get("/tulokset", (req, res) =>{
     lahtiAaikaMika: lahti.driver[4].qualTime,
     lahtiAaikaJoni: lahti.driver[5].qualTime,
     lahtiAaikaJere: lahti.driver[6].qualTime,
-    lahtiAaikaJuha: lahti.driver[7].qualTime
+    lahtiAaikaJuha: lahti.driver[7].qualTime,
+    // PowerPark 1
+    pw1Petteri: pw1.driver[0].name,
+    pw1VilleS: pw1.driver[1].name,
+    pw1Lauri: pw1.driver[2].name,
+    pw1Jani: pw1.driver[3].name,
+    pw1Mika: pw1.driver[4].name,
+    pw1Joni: pw1.driver[5].name,
+    pw1Jouni: pw1.driver[6].name,
+    pw1JuhaK: pw1.driver[7].name,
+    pw1Antti: pw1.driver[8].name,
+    pw1Tommi: pw1.driver[9].name,
+    pw1KisaAikaPetteri: pw1.driver[0].circuitTime,
+    pw1KisaAikaVilleS: pw1.driver[1].circuitTime,
+    pw1KisaAikaLauri: pw1.driver[2].circuitTime,
+    pw1KisaAikaJani: pw1.driver[3].circuitTime,
+    pw1KisaAikaMika: pw1.driver[4].circuitTime,
+    pw1KisaAikaJoni: pw1.driver[5].circuitTime,
+    pw1KisaAikaJouni: pw1.driver[6].circuitTime,
+    pw1KisaAikaJuhaK: pw1.driver[7].circuitTime,
+    pw1KisaAikaAntti: pw1.driver[8].circuitTime,
+    pw1KisaAikaTommi: pw1.driver[9].circuitTime,
+    pw1AaikaPetteri: pw1.driver[0].qualTime,
+    pw1AaikaVilleS: pw1.driver[1].qualTime,
+    pw1AaikaLauri: pw1.driver[2].qualTime,
+    pw1AaikaJani: pw1.driver[3].qualTime,
+    pw1AaikaMika: pw1.driver[4].qualTime,
+    pw1AaikaJoni: pw1.driver[5].qualTime,
+    pw1AaikaJouni: pw1.driver[6].qualTime,
+    pw1AaikaJuhaK: pw1.driver[7].qualTime,
+    pw1AaikaAntti: pw1.driver[8].qualTime,
+    pw1AaikaTommi: pw1.driver[9].qualTime,
+    // PowerPark II
+    pw2Petteri: pw2.driver[0].name,
+    pw2VilleS: pw2.driver[1].name,
+    pw2Lauri: pw2.driver[2].name,
+    pw2Jani: pw2.driver[3].name,
+    pw2Mika: pw2.driver[4].name,
+    pw2Joni: pw2.driver[5].name,
+    pw2Jouni: pw2.driver[6].name,
+    pw2JuhaK: pw2.driver[7].name,
+    pw2Antti: pw2.driver[8].name,
+    pw2Tommi: pw2.driver[9].name,
+    pw2KisaAikaPetteri: pw2.driver[0].circuitTime,
+    pw2KisaAikaVilleS: pw2.driver[1].circuitTime,
+    pw2KisaAikaLauri: pw2.driver[2].circuitTime,
+    pw2KisaAikaJani: pw2.driver[3].circuitTime,
+    pw2KisaAikaMika: pw2.driver[4].circuitTime,
+    pw2KisaAikaJoni: pw2.driver[5].circuitTime,
+    pw2KisaAikaJouni: pw2.driver[6].circuitTime,
+    pw2KisaAikaJuhaK: pw2.driver[7].circuitTime,
+    pw2KisaAikaAntti: pw2.driver[8].circuitTime,
+    pw2KisaAikaTommi: pw2.driver[9].circuitTime,
   })
 })
 
@@ -143,8 +200,8 @@ app.get("/juha", (req, res) =>{
   res.render("juha")
 })
 
-app.get("/jakala", (req, res) =>{
-  res.render("jakala")
+app.get("/jere", (req, res) =>{
+  res.render("jere")
 })
 
 app.get("/mika", (req, res) =>{
@@ -154,10 +211,6 @@ app.get("/mika", (req, res) =>{
 app.get("/villel", (req, res) =>{
   res.render("villel")
 })
-
-
-
-
 
 app.listen(port, () => {
   console.log("Server is up on port " + port)
