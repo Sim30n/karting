@@ -27,7 +27,7 @@
 </nav>
 
 <div id="aikaTaulukkoImatra" class="container" style="margin-top:100px">
-  <h1 style="text-align: center">MIKA</h1>
+  <h1 style="text-align: center">JOUNI</h1>
   <table class="table">
   <thead>
       <tr>
@@ -46,40 +46,40 @@
       </tr>
       <tr>
         <th scope="row">Vantaa</th>
-        <td>2</td>
-        <td>43.413</td>
-        <td>18</td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <th scope="row">Lahti</th>
-        <td>6</td>
-        <td>27.862</td>
-        <td>8</td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <th scope="row">Power Park I</th>
-        <td>4</td>
-        <td>55.414</td>
-        <td>12</td>
+        <td>1</td>
+        <td>54.684</td>
+        <td>26</td>
       </tr>
       <tr>
         <th scope="row">Power Park II</th>
-        <td>2</td>
-        <td>48.743</td>
-        <td>18</td>
+        <td>1</td>
+        <td>46.574</td>
+        <td>25</td>
       </tr>
       <tr>
         <th scope="row">Vantaa II</th>
-        <td>6</td>
-        <td>45.524</td>
-        <td>8</td>
+        <td>1</td>
+        <td>43.346</td>
+        <td>26</td>
       </tr>
     </tbody>
   </table>
   <canvas id="sijoitus"></canvas>
   <div style="margin-top:25px;">
-    <a href="/jere"><< Edellinen</a>
-    <a style="float: right;" href="/villel">Seuraava >></a>
+    <a href="/joni"><< Edellinen</a>
+    <a style="float: right;" href="/lauri">Seuraava >></a>
   </div>
 </div>
 
@@ -89,11 +89,11 @@ var ctx = document.getElementById('sijoitus');
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ['Imatra', 'Vantaa', 'Lahti', 'Power Park I', 'Power Park II', '6.Osakilpailu'],
+        labels: ['Imatra', 'Vantaa', 'Lahti', 'Power Park I', 'Power Park II', 'Vantaa II'],
         datasets: [{
             label: 'Sijoitus',
             fill: false,
-            data: [, 2, 6, 4 , 2 , 6],
+            data: [,,,1,1,1],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -120,7 +120,7 @@ var myChart = new Chart(ctx, {
                     reverse: true,
                     steps: 10,
                     stepSize: 1,
-                    max: 6,
+                    max: 10,
                     min:1
                 }
             }]

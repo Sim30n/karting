@@ -69,16 +69,16 @@
         <td>4</td>
       </tr>
       <tr>
-        <th scope="row">6.Osakilpailu</th>
-        <td></td>
-        <td></td>
-        <td></td>
+        <th scope="row">Vantaa II</th>
+        <td>2</td>
+        <td>44.030</td>
+        <td>18</td>
       </tr>
     </tbody>
   </table>
   <canvas id="sijoitus"></canvas>
   <div style="margin-top:25px;">
-    <a href="#"><< Edellinen</a>
+    <a href="/jouni"><< Edellinen</a>
     <a style="float: right;" href="/jamppa">Seuraava >></a>
   </div>
 </div>
@@ -89,11 +89,11 @@ var ctx = document.getElementById('sijoitus');
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ['Imatra', 'Vantaa', 'Lahti', 'Power Park I', 'Power Park II', '6.Osakilpailu'],
+        labels: ['Imatra', 'Vantaa', 'Lahti', 'Power Park I', 'Power Park II', 'Vantaa II'],
         datasets: [{
             label: 'Sijoitus',
             fill: false,
-            data: [1, 5, 1, 7 ,8 , ],
+            data: [1, 5, 1, 7 ,8 ,2],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',

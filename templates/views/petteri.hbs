@@ -69,10 +69,10 @@
         <td>2</td>
       </tr>
       <tr>
-        <th scope="row">6.Osakilpailu</th>
-        <td></td>
-        <td></td>
-        <td></td>
+        <th scope="row">Vantaa II</th>
+        <td>5</td>
+        <td>43.662</td>
+        <td>10</td>
       </tr>
     </tbody>
   </table>
@@ -89,11 +89,11 @@ var ctx = document.getElementById('sijoitus');
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ['Imatra', 'Vantaa', 'Lahti', 'Power Park I', 'Power Park II', '6.Osakilpailu'],
+        labels: ['Imatra', 'Vantaa', 'Lahti', 'Power Park I', 'Power Park II', 'Vantaa II'],
         datasets: [{
             label: 'Sijoitus',
             fill: false,
-            data: [4, 3, 4, 6, 9, ],
+            data: [4, 3, 4, 6, 9, 5],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',

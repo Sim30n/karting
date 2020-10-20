@@ -6,6 +6,7 @@ const vantaa = require("./vantaa.json")
 const lahti = require("./lahti.json")
 const pw1 = require("./pw1.json")
 const pw2 = require("./pw2.json")
+const vantaa2 = require("./vantaa2.json")
 let imatraOtsikko = "Imatran GP"
 let vantaaOtsikko = "Vantaan GP"
 let lahtiOtsikko = "Lahden GP"
@@ -147,6 +148,31 @@ app.get("/tulokset", (req, res) =>{
     pw2KisaAikaJuhaK: pw2.driver[7].circuitTime,
     pw2KisaAikaAntti: pw2.driver[8].circuitTime,
     pw2KisaAikaTommi: pw2.driver[9].circuitTime,
+    // Vantaa II
+    vantaa2Petteri: vantaa2.driver[0].name,
+    vantaa2VilleS: vantaa2.driver[1].name,
+    vantaa2Lauri: vantaa2.driver[2].name,
+    vantaa2Jere: vantaa2.driver[3].name,
+    vantaa2Mika: vantaa2.driver[4].name,
+    vantaa2Joni: vantaa2.driver[5].name,
+    vantaa2Jouni: vantaa2.driver[6].name,
+    vantaa2VilleL: vantaa2.driver[7].name,
+    vantaa2KisaAikaPetteri: vantaa2.driver[0].circuitTime,
+    vantaa2KisaAikaVilleS: vantaa2.driver[1].circuitTime,
+    vantaa2KisaAikaLauri: vantaa2.driver[2].circuitTime,
+    vantaa2KisaAikaJere: vantaa2.driver[3].circuitTime,
+    vantaa2KisaAikaMika: vantaa2.driver[4].circuitTime,
+    vantaa2KisaAikaJoni: vantaa2.driver[5].circuitTime,
+    vantaa2KisaAikaJouni: vantaa2.driver[6].circuitTime,
+    vantaa2KisaAikaVilleL: vantaa2.driver[7].circuitTime,
+    vantaa2AaikaPetteri: vantaa2.driver[0].qualTime,
+    vantaa2AaikaVilleS: vantaa2.driver[1].qualTime,
+    vantaa2AaikaLauri: vantaa2.driver[2].qualTime,
+    vantaa2AaikaJere: vantaa2.driver[3].qualTime,
+    vantaa2AaikaMika: vantaa2.driver[4].qualTime,
+    vantaa2AaikaJoni: vantaa2.driver[5].qualTime,
+    vantaa2AaikaJouni: vantaa2.driver[6].qualTime,
+    vantaa2AaikaVilleL: vantaa2.driver[7].qualTime,
   })
 })
 
@@ -210,6 +236,14 @@ app.get("/mika", (req, res) =>{
 
 app.get("/villel", (req, res) =>{
   res.render("villel")
+})
+
+app.get("/joni", (req, res) =>{
+  res.render("joni")
+})
+
+app.get("/jouni", (req, res) =>{
+  res.render("jouni")
 })
 
 app.listen(port, () => {
